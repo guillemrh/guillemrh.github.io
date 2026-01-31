@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillem RH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #111111;
+            --text: #e5e5e5;
+            --text-muted: #888888;
+            --link: #e5e5e5;
+            --link-hover: #ffffff;
+            --border: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Code Pro', monospace;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Header */
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .site-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .site-title a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: var(--link-hover);
+        }
+
+        /* Main content */
+        .intro {
+            margin-bottom: 2.5rem;
+        }
+
+        .intro p {
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .social-line {
+            color: var(--text-muted);
+        }
+
+        .social-line a {
+            color: var(--text);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .social-line a:hover {
+            color: var(--link-hover);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--text);
+        }
+
+        /* Project list */
+        .project-list {
+            list-style: none;
+        }
+
+        .project-list li {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-list li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .project-list a {
+            color: var(--text);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .project-list a:hover {
+            color: var(--link-hover);
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .project-tech {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Video container */
+        .video-container {
+            margin-top: 1rem;
+            max-width: 100%;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: #000;
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+        /* Experience */
+        .experience-list {
+            list-style: none;
+        }
+
+        .experience-list li {
+            margin-bottom: 1.25rem;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .exp-title {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .exp-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .exp-company {
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+        }
+
+        /* Skills */
+        .skills-line {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer nav {
+            margin-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .exp-header {
+                flex-direction: column;
+                gap: 0.15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="site-title"><a href="/">Guillem RH</a></h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="intro">
+                <p>
+                    Data Engineer with a chemical-engineering past and a growing obsession with backend systems, distributed data, and anything that scales. Building ETLs, PySpark pipelines, and cloud/data architectures. Currently leveling up toward backend + AI engineering with a focus on clean architecture and real deployments.
+                </p>
+                <p class="social-line">
+                    Find me on <a href="https://github.com/guillemrh" target="_blank">GitHub</a>, 
+                    <a href="https://linkedin.com/in/guillem-rovira-herrero" target="_blank">LinkedIn</a>, 
+                    and <a href="mailto:arivor.guillem@gmail.com">Email</a>.
+                </p>
+            </section>
+
+            <section id="projects">
+                <h2 class="section-title">Projects</h2>
+                <ul class="project-list">
+                    <li>
+                        <a href="https://github.com/guillemrh/federated-QA-system" target="_blank">Federated QA System</a>: A federated question-answering system that enables distributed querying across multiple data sources while preserving privacy.
+                        <div class="project-tech">Python · Federated Learning · NLP</div>
+                        <!-- Uncomment and add your video URL to show a demo:
+                        <div class="video-container">
+                            <video controls>
+                                <source src="https://github.com/user-attachments/assets/YOUR-VIDEO-ID" type="video/mp4">
+                            </video>
+                        </div>
+                        -->
+                    </li>
+                    <li>
+                        <a href="https://github.com/guillemrh/pyspark-code-analyzer" target="_blank">PySpark Code Analyzer</a>: Static analysis tool for PySpark code to detect patterns, anti-patterns, and optimization opportunities in Spark jobs.
+                        <div class="project-tech">Python · PySpark · Static Analysis</div>
+                    </li>
+                    <li>
+                        <a href="https://github.com/guillemrh/ML-inference-platform" target="_blank">ML Inference Platform</a>: A scalable platform for deploying and serving machine learning models with focus on performance and reliability.
+                        <div class="project-tech">Python · ML Ops · Docker</div>
+                    </li>
+                    <li>
+                        <a href="https://github.com/guillemrh/TFG" target="_blank">TFG</a>: Final degree project — engineering research and implementation.
+                        <div class="project-tech">Python</div>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="experience">
+                <h2 class="section-title">Experience</h2>
+                <ul class="experience-list">
+                    <li>
+                        <div class="exp-header">
+                            <span class="exp-title">Data Engineer</span>
+                            <span class="exp-date">Present</span>
+                        </div>
+                        <div class="exp-company">Your Company</div>
+                    </li>
+                    <li>
+                        <div class="exp-header">
+                            <span class="exp-title">Previous Role</span>
+                            <span class="exp-date">Year — Year</span>
+                        </div>
+                        <div class="exp-company">Previous Company</div>
+                    </li>
+                    <li>
+                        <div class="exp-header">
+                            <span class="exp-title">Chemical Engineering</span>
+                            <span class="exp-date">Graduated</span>
+                        </div>
+                        <div class="exp-company">University</div>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="skills">
+                <h2 class="section-title">Skills</h2>
+                <p class="skills-line">
+                    Azure · PySpark · Python · SQL · Snowflake · Power BI · Oracle · Docker · Git · ETL · Data Pipelines · Cloud Architecture
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 Guillem RH</p>
+            <nav>
+                <a href="/">Home</a>
+                <a href="#projects">Projects</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
