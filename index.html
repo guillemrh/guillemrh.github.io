@@ -12,7 +12,8 @@
             --bg: #111111;
             --text: #e5e5e5;
             --text-muted: #888888;
-            --link: #e5e5e5;
+            --accent: #22d3ee;
+            --accent-dim: #0e7490;
             --link-hover: #ffffff;
             --border: #333333;
         }
@@ -59,6 +60,10 @@
             text-decoration: none;
         }
 
+        .site-title a:hover {
+            color: var(--accent);
+        }
+
         nav {
             display: flex;
             gap: 1.5rem;
@@ -71,7 +76,7 @@
         }
 
         nav a:hover {
-            color: var(--link-hover);
+            color: var(--accent);
         }
 
         /* Main content */
@@ -89,13 +94,14 @@
         }
 
         .social-line a {
-            color: var(--text);
-            text-decoration: underline;
-            text-underline-offset: 3px;
+            color: var(--accent);
+            text-decoration: none;
         }
 
         .social-line a:hover {
             color: var(--link-hover);
+            text-decoration: underline;
+            text-underline-offset: 3px;
         }
 
         /* Sections */
@@ -104,10 +110,10 @@
         }
 
         .section-title {
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 1.25rem;
-            color: var(--text);
+            color: var(--accent);
         }
 
         /* Project list */
@@ -130,10 +136,11 @@
             color: var(--text);
             text-decoration: underline;
             text-underline-offset: 3px;
+            text-decoration-color: var(--accent-dim);
         }
 
         .project-list a:hover {
-            color: var(--link-hover);
+            color: var(--accent);
         }
 
         .project-desc {
@@ -142,7 +149,7 @@
         }
 
         .project-tech {
-            color: var(--text-muted);
+            color: var(--accent-dim);
             font-size: 0.85rem;
             margin-top: 0.5rem;
         }
@@ -185,7 +192,7 @@
         }
 
         .exp-date {
-            color: var(--text-muted);
+            color: var(--accent-dim);
             font-size: 0.85rem;
         }
 
@@ -210,6 +217,10 @@
 
         footer nav {
             margin-top: 1rem;
+        }
+
+        footer a:hover {
+            color: var(--accent);
         }
 
         /* Responsive */
@@ -250,11 +261,15 @@
                     <li>
                         <a href="https://github.com/guillemrh/federated-QA-system" target="_blank">Federated QA System</a>: A federated question-answering system that enables distributed querying across multiple data sources while preserving privacy.
                         <div class="project-tech">Python · Federated Learning · NLP</div>
+                        <!-- To add a video demo:
+                             1. Upload your .mp4 to the repo (e.g., /videos/demo.mp4)
+                             2. Use: src="https://raw.githubusercontent.com/guillemrh/guillemrh.github.io/main/videos/demo.mp4"
                         <div class="video-container">
                             <video controls>
-                                <source src="https://github.com/user-attachments/assets/YOUR-VIDEO-ID" type="video/mp4">
+                                <source src="https://raw.githubusercontent.com/guillemrh/guillemrh.github.io/main/videos/your-demo.mp4" type="video/mp4">
                             </video>
                         </div>
+                        -->
                     </li>
                     <li>
                         <a href="https://github.com/guillemrh/pyspark-code-analyzer" target="_blank">PySpark Code Analyzer</a>: Static analysis tool for PySpark code to detect patterns, anti-patterns, and optimization opportunities in Spark jobs.
